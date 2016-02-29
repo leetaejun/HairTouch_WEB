@@ -47,3 +47,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Responders
 gem 'responders', '~> 2.0'
+
+# Paperclip (for image upload)
+gem "paperclip", "~> 4.3"

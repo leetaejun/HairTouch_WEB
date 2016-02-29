@@ -5,6 +5,8 @@
 <table>
   <thead>
     <tr>
+      <th>Id</th>
+      <th>Image Thumbnail</th>
       <th>Email</th>
       <th>Password</th>
       <th>Nickname</th>
@@ -15,6 +17,14 @@
   <tbody>
     <% @designers.each do |designer| %>
       <tr>
+        <td><%= designer.id %></td>
+        <td align="center">
+          <% if designer.image.present? %>
+            <img src= <%= designer.image.image.url %> width="100" height="100">
+          <% else %>
+            이미지 없음
+          <% end %> 
+        </td>
         <td><%= designer.email %></td>
         <td><%= designer.password %></td>
         <td><%= designer.nickname %></td>
