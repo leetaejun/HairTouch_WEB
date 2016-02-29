@@ -1,4 +1,4 @@
-module DesignersHelper
+module Api::DesignersHelper
   def self.gen_designer_auth(designer)
     access_token = get_access_token(designer)
     access_token = get_access_token(designer) while duplicated(access_token)

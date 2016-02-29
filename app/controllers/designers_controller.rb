@@ -32,6 +32,7 @@ class DesignersController < ApplicationController
     @designer = Designer.new(designer_params)
     ImageHelper.create_single_image(params[:image], @designer)
     @designer.save
+    DesignersHelper.gen_designer_auth(@designer).access_token
     respond_with(@designer)
   end
 

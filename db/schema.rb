@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160229080127) do
+ActiveRecord::Schema.define(version: 20160229111847) do
 
   create_table "common_codes", force: :cascade do |t|
     t.string   "main_code"
@@ -20,6 +20,15 @@ ActiveRecord::Schema.define(version: 20160229080127) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
+
+  create_table "designer_auths", force: :cascade do |t|
+    t.integer  "designer_id"
+    t.text     "access_token"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "designer_auths", ["designer_id"], name: "index_designer_auths_on_designer_id"
 
   create_table "designers", force: :cascade do |t|
     t.string   "email"
