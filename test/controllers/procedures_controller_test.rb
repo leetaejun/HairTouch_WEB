@@ -17,7 +17,7 @@ class ProceduresControllerTest < ActionDispatch::IntegrationTest
 
   test "should create procedure" do
     assert_difference('Procedure.count') do
-      post procedures_url, params: { procedure: { content: @procedure.content, designer_id: @procedure.designer_id, hair_category_id: @procedure.hair_category_id, hair_length_id: @procedure.hair_length_id, subtitle: @procedure.subtitle, title: @procedure.title } }
+      post procedures_url, params: { procedure: { content: @procedure.content, designer_id: @procedure.designer_id, subtitle: @procedure.subtitle, title: @procedure.title } }
     end
 
     assert_redirected_to procedure_path(Procedure.last)
@@ -34,7 +34,7 @@ class ProceduresControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update procedure" do
-    patch procedure_url(@procedure), params: { procedure: { content: @procedure.content, designer_id: @procedure.designer_id, hair_category_id: @procedure.hair_category_id, hair_length_id: @procedure.hair_length_id, subtitle: @procedure.subtitle, title: @procedure.title } }
+    patch procedure_url(@procedure), params: { procedure: { content: @procedure.content, designer_id: @procedure.designer_id, subtitle: @procedure.subtitle, title: @procedure.title } }
     assert_redirected_to procedure_path(@procedure)
   end
 

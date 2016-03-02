@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  procedure: one
+  gender_id: 1
+  length_id: 1
+  category_id: 1
+  category_detail_id: 1
+
+two:
+  procedure: two
+  gender_id: 1
+  length_id: 1
+  category_id: 1
+  category_detail_id: 1

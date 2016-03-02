@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  procedure: one
+  procedure_category: one
   content: MyText
 
 two:
-  procedure: two
+  procedure_category: two
   content: MyText
