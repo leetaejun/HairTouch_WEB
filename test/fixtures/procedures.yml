@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  designer: one
+  hair_length_id: 1
+  hair_category_id: 1
+  title: MyText
+  subtitle: MyText
+  content: MyText
+
+two:
+  designer: two
+  hair_length_id: 1
+  hair_category_id: 1
+  title: MyText
+  subtitle: MyText
+  content: MyText

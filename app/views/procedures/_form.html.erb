@@ -1,0 +1,47 @@
+<%= form_for(procedure) do |f| %>
+  <% if procedure.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(procedure.errors.count, "error") %> prohibited this procedure from being saved:</h2>
+
+      <ul>
+      <% procedure.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :designer_id %>
+    <%= f.text_field :designer_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :hair_length_id %>
+    <%= f.number_field :hair_length_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :hair_category_id %>
+    <%= f.number_field :hair_category_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_area :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :subtitle %>
+    <%= f.text_area :subtitle %>
+  </div>
+
+  <div class="field">
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

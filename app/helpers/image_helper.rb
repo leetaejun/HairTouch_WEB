@@ -40,7 +40,7 @@ module ImageHelper
       @image.save
     else
       puts model
-      default_image_path = "#{Rails.root}/public/system/images/ic_account_box.png"
+      default_image_path = "#{Rails.root}/public/ic_account_box.png"
       file = File.open(default_image_path)
       image = Image.new
       image.image = file

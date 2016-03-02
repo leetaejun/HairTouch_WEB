@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :procedures
   resources :designers
 
   namespace :api do

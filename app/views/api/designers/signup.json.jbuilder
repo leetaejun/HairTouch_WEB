@@ -1,11 +1,11 @@
 json.access_token @token
 json.designer do
-  json.id @designer.user_id
+  json.id @designer.id
   json.email @designer.email
   json.password @designer.password
-  json.fullname @designer.fullname
+  json.nickname @designer.nickname
   json.image do
-    json.id @designer.image.image_id
+    json.id @designer.image.id
     json.file_name @designer.image.image_file_name
     json.file_content_type @designer.image.image_content_type
     json.file_size @designer.image.image_file_size

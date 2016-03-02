@@ -5,7 +5,7 @@ json.designer do
   json.password @designer.password
   json.nickname @designer.nickname
   json.image do
-    json.id @designer.image.image_id
+    json.id @designer.image.id
     json.file_name @designer.image.image_file_name
     json.file_content_type @designer.image.image_content_type
     json.file_size @designer.image.image_file_size

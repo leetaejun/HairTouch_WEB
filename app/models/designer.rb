@@ -1,6 +1,7 @@
 class Designer < ApplicationRecord
   has_one :image, as: :imageable
   has_many :designer_auths
+  has_many :procedures
 
   def self.available_email(email)
     find_by(email: email).nil? if email.present?
