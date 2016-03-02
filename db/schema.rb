@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160229111847) do
+ActiveRecord::Schema.define(version: 20160302140018) do
 
   create_table "common_codes", force: :cascade do |t|
     t.string   "main_code"
@@ -50,5 +50,27 @@ ActiveRecord::Schema.define(version: 20160229111847) do
   end
 
   add_index "images", ["imageable_type", "imageable_id"], name: "index_images_on_imageable_type_and_imageable_id"
+
+  create_table "procedure_details", force: :cascade do |t|
+    t.integer  "procedure_id"
+    t.text     "content"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "procedure_details", ["procedure_id"], name: "index_procedure_details_on_procedure_id"
+
+  create_table "procedures", force: :cascade do |t|
+    t.integer  "designer_id"
+    t.integer  "hair_length_id"
+    t.integer  "hair_category_id"
+    t.text     "title"
+    t.text     "subtitle"
+    t.text     "content"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "procedures", ["designer_id"], name: "index_procedures_on_designer_id"
 
 end
